@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HElloWorld</title>
+    <link rel="stylesheet" href="helloWorld.js" type="text/Javascript">
+</head>
+<body>
+    
+    <script type="text/javascript">
+    
+        
+
+        let BS=Number( prompt("enter basic salary") );
+
+        let category=prompt("enter employee category ");
+
+
+
+        //hra
+        if (category=='A'){
+            var HRA=7000;
+        }
+        else if(category=='B'){
+            var HRA=8000;
+        }
+        else if(category=='C'){
+            var HRA=9000;
+        }
+        else{
+            var HRA=5000;
+        }
+        console.log("HRA",HRA);
+
+
+        //DA
+        if (BS<=60000){
+            var DA=BS*9/10;
+        }
+        else if (BS>60000 || BS<=70000){
+            var DA=BS*8/10;
+        }
+        else if (BS>70000 || BS<=80000){
+            var DA=BS*7/10;
+        }
+        else if (BS>90000){
+            var DA=BS*6/10;
+        }
+        console.log("DA",DA);
+
+        //TA
+        var TA=BS*1/10;
+        console.log ("TA",TA)
+
+        var gross= BS + HRA + DA +TA ;
+        document.write("gross",gross);
+        
+
+        var income=BS*1/10;
+        var netSalary=gross-DA-TA;
+        document.write("\n net salary",netSalary);
+    </script>
+</body>
+</html>
