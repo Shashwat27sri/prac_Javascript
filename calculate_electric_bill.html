@@ -1,0 +1,57 @@
+<!-- calculating domestic and commercial electrical bill by getting the units from the user -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+</html>
+<script type="text/Javascript">
+
+    function bill(unit,value) {        //-----------bill function --------
+        var billValue=unit*value;
+        console.log("Your Bill value is: ",billValue);
+    }
+
+
+    // main
+    var unit= prompt("enter the meter units");
+    var supplyType=prompt("enter the supply type");
+    if (supplyType=="Domestic"){
+        if (unit<=200){
+            var value=0;
+        }
+        else if(unit>200 || unit<=400){
+            var value=5;
+        }
+        else if(unit>400 || unit<=600){
+            var value=10;
+        }
+        else if(unit>600){
+            var value=15;
+        }
+    }
+    else if(supplyType=="commercial"){
+        if (unit<=200){
+            var value=10;
+        }
+        else if(unit>200 || unit<=400){
+            var value=20;
+        }
+        else if(unit>400 || unit<=600){
+            var value=30;
+        }
+        else if(unit>600){
+            var value=40;
+        }
+    }
+    else{
+        console.log("invalid power supply type ");
+    }
+    console.log("units readed: ",unit);
+    console.log("value per unit: ",value);
+    bill(unit,value);           //----------------calling function --------
+</script>
