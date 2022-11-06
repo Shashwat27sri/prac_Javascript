@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+</html>
+<script>
+
+    function voter(age,name){
+        if (age>=18){
+        flag=1;
+        return flag;
+        }
+        else{
+            console.log("not eligible");
+        }
+
+    }
+
+    function license(age,name){
+        if (age>=18 && age<65){
+            flag=1;
+            return flag;
+        }
+        else{
+            console.log("not eligible");
+        }
+    }
+
+    function OTP(){
+        var otp=prompt("enter the OTP sended on registered phone number:");
+        console.log("Your document is ready for download ");
+    }
+
+    var name=prompt("enter your name");
+    var age=prompt("enter your age");
+    var mobile=prompt("enter your contact number");
+    var flag=0;
+
+    alert("for what you want to check \n \t 1. Voting Eligibility \n \t 2. Driving license Eligibility");
+    var choice=Number(prompt("enter your choice"));
+
+
+    switch (choice) {
+        case 1:
+            var a=voter(age,name);
+            if (a==1){
+                console.log("eligible for voting and your voter card will be sended on your mobile ");
+                OTP();
+            }
+            break;
+        case 2:
+            var a=license(age,name);
+            if (a==1){
+                console.log("eligible for driving and your driving license will be sended on your mobile ");
+                OTP();
+            }
+            break;
+    
+       
+        default:
+            alert("invalid input");
+            break;
+    }
+
+    
+
+</script>
