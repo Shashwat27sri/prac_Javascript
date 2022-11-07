@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function bucket(val){
+        if (val==1){
+            count1=count1+1;
+            console.log("apples in bucket:",count1);
+        }
+        else if(val=2){
+            count2=count2+1;
+            console.log("mangoes in bucket:",count2);
+        }
+        else if (val==3){
+            count3=count3+1;
+            console.log("papaya's in bucket:",count3);
+        }
+    }
+
+    function condition() {
+        var flag=0;
+        console.log("Condition Check:\n\t 1 for good\n\t 0 for bad");
+        var condi=Number(prompt("how was the codition of fruit"));
+        if(condi==1){
+            flag=1;
+        }
+        else{
+            console.log("unpleseant condition");
+        }
+        return flag;
+        
+    }
+
+    function apple() {
+        document.write("Apple is ready for plucking and come to your plates ");
+        document.write("\n");
+        const val=1;
+        bucket(val);
+    }
+
+    function mango() {
+        const val=2;
+        document.write("Mangoes is ready for plucking and come to your plates ");
+        document.write("\n");
+        bucket(val);
+    }
+
+    function papaya() {
+        const val=3;
+        document.write("Papaya's is ready for plucking and come to your plates ");
+        document.write("\n");
+        bucket(val);
+    }
+
+    const N=prompt("number of fruits items you want to check");
+    var count1=0;
+    var count2=0;
+    var count3=0;
+    for (let i=1;i<=N;i++){
+        console.log("FRUIT LIST: \n \t 1.Apple \n \t 2.mango \n \t 3.papaya ");
+        let fruit= Number(prompt("enter the fruit code:"));
+
+        switch (fruit) {
+            case 1:
+                console.log("select color: \n \t 1.Bright Red \n\t 2.Fade Red \n\t 3.Faded Green \n\t 4. Bright Green");
+                var colour=Number(prompt("enter the code"));
+                if(colour==1 || colour==2){
+                    var OK=condition();
+                    if (OK==1){
+                    apple();}
+                }
+                else{
+                    alert("unpleasent colour of fruit");
+                }
+                break;
+            
+            
+            case 2:
+                console.log("select color: \n \t 1.Bright Yellow \n\t 2.Fade yellow \n\t 3.Faded Green \n\t 4. Bright Green");
+                var colour=Number(prompt("enter the code"));
+                if(colour==1 || colour==2){
+                    var OK=condition();
+                    if (OK==1){
+                    mango();}
+                }
+                else{
+                    alert("unpleasent colour of fruit");
+                }
+                break;
+            case 3:
+                console.log("select color: \n \t 1.Bright orange \n\t 2.Fade orange \n\t 3.Faded Green \n\t 4. Bright Green");
+                var colour=Number(prompt("enter the code"));
+                if(colour==1 || colour==2){
+                    var OK=condition();
+                    if (OK==1){
+                        papaya();
+                    }
+                    
+                }
+                else{
+                    alert("unpleasent colour of fruit");
+                }
+                break;
+        
+            default:
+                console.log("entered fruit code is incorrect");
+                break;
+        }
+    }
+
+
+</script>
