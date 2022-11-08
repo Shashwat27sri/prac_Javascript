@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result management System</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function report(name,Id,val1,val2,val3) {
+        console.log("--------------------------------------------------\n\t\t\t\t Report card\t\t\t\n--------------------------------------------------");
+        console.log("-------------------"+name+"-"+Id+"--------------------");
+        console.log("Maths marks:\t",val1);
+        console.log("SST marks:  \t",val2);
+        console.log("Science marks:\t",val3);
+    }
+
+
+
+
+
+    function marks(name,Id) {
+        console.log("enter marks of subjects:\n\t 1.maths\n\t 2.sst\n\t 3.science");
+        var sub=Number(prompt("enter subject code"));
+        for (let i=1; i<=3; i++) {
+           
+            switch (sub) {
+                case 1:
+                    console.log ("enter "+name+"'s"+" Maths marks");
+                    var val1=prompt("marks:");
+                    break;
+                case 2:
+                    console.log ("enter "+name+"'s"+" SST marks");
+                    var val2=prompt("marks:");
+                    break;
+                case 3:
+                    console.log ("enter "+name+"'s"+" Science marks");
+                    var val3=prompt("marks:");
+                    break;        
+                default:
+                    break;
+            }
+
+            if (i==1 ||i==2){
+                console.log("enter marks of subjects:\n\t 1.maths\n\t 2.sst\n\t 3.science");
+                console.log("enter next subject code");
+                var sub=Number(prompt("enter code"));
+            }
+            else{
+                break;
+            }
+        }
+        report(name,Id,val1,val2,val3);
+    }
+
+    console.log("list of Students: \n\t 1.MAX \n\t 2.WILL \n\t 3.SHASHWAT");
+    var name=prompt("enter student Name in capitals");
+    if (name=="MAX"){
+        var Id=Number(prompt("enter your ID"));
+        marks(name,Id);
+    }
+    else if (name=="WILL"){
+        var Id=Number(prompt("enter your ID"));
+        marks(name,Id);
+    }
+    else if (name=="SHASHWAT"){
+        var Id=Number(prompt("enter your ID"));
+        marks(name,Id);
+    }
+    
+</script>
