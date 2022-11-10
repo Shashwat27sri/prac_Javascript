@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+</html>
+<script>
+    const service=150;
+    var calls=Number(prompt("enter number of calls"));
+    console.log("choose your telecom pack \n\t 0-100 \t\t\t\t 2 \n\t 101-200 \t\t\t 4 \n\t 201-300 \t\t\t 5 \n\t 301-400 \t\t\t 6 \n\t >400 \t\t\t\t 10");
+
+    if (calls>0 || calls<=100){
+        var rup= calls*2 + service ;
+    }
+    else if (calls>100 || calls<=200){
+        var rup= 100 *2 + (calls-100)*4 + service ;
+    }
+    else if (calls>200 || calls<=300){
+        var rup= 100*2 +100*4 + (calls-200) *5 + service ;
+    }
+    else if (calls>300 || calls<=400){
+        var rup= 100*2 +100*4 +100*5+(calls-300)*6 + service ;
+    }
+    else {
+        var rup= 100*2 +100*4 +100*5+ 100*6 + (calls-400)*10 + service ;
+    }
+    console.log ("total call bill=",rup);
+    console.log ("would you like to add msg pack to it also");
+    var choice=Number(prompt("enter 1 for yes and 0 for no"));
+    if (choice==1){
+        console.log("message pack 100/month");
+        const msg=100;
+        console.log("total call+msg bill= ",rup+100);
+    }
+    console.log("would you also want to add data packs ??");
+    var data =Number(prompt("enter 1 or 0 for y/n"));
+    if (data==1){
+        console.log ("Data packs \n\t\t 1gb/d \t\t200 \n\t\t 2gb/d \t\t300 \n\t\t 3gb/d \t\t400 ");
+        var chooseData=Number(prompt("enter data limit which you want to avail"));
+        if (chooseData==1){
+            console.log("total telecom bill= ",rup+200);
+        }
+        else if (chooseData==2){
+            console.log("total telecom bill= ",rup+300);
+        }
+        else if (chooseData==3){
+            console.log("total telecom bill= ",rup+400);
+        }
+    }
+    
+
+</script>
