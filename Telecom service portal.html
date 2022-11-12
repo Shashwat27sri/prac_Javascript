@@ -13,19 +13,19 @@
     var calls=Number(prompt("enter number of calls"));
     console.log("choose your telecom pack \n\t 0-100 \t\t\t\t 2 \n\t 101-200 \t\t\t 4 \n\t 201-300 \t\t\t 5 \n\t 301-400 \t\t\t 6 \n\t >400 \t\t\t\t 10");
 
-    if (calls>0 || calls<=100){
+    if (calls>0 && calls<=100){
         var rup= calls*2 + service ;
     }
-    else if (calls>100 || calls<=200){
+    else if (calls>100 && calls<=200){
         var rup= 100 *2 + (calls-100)*4 + service ;
     }
-    else if (calls>200 || calls<=300){
+    else if (calls>200 && calls<=300){
         var rup= 100*2 +100*4 + (calls-200) *5 + service ;
     }
-    else if (calls>300 || calls<=400){
+    else if (calls>300 && calls<=400){
         var rup= 100*2 +100*4 +100*5+(calls-300)*6 + service ;
     }
-    else {
+    else if (calls>400) {
         var rup= 100*2 +100*4 +100*5+ 100*6 + (calls-400)*10 + service ;
     }
     console.log ("total call bill=",rup);
