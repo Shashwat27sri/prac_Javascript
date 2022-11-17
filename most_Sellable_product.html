@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most sellable product</title>
+</head>
+<body></body>
+</html>
+<script>
+    var listProd=[];
+    var listCost=[];
+    let N=prompt("enter numbe rof products you want to insert");
+    for(let i=0;i<N;i++){
+    var element=prompt("enter the product");
+    listProd.push(element);
+    }
+    console.log(listProd);
+
+    for (let i=0;i<N;i++){
+    var cost=Number(prompt("enter cost of products"));
+    listCost.push(cost);
+    }
+    console.log(listCost);
+
+
+    var max= Math.max(...listCost);
+    console.log("Maximum cost:",max);
+    var index=listCost.indexOf(max);
+    console.log(listProd[index],"is the most sellable product");
+    
+</script>
