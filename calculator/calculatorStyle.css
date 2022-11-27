@@ -1,0 +1,31 @@
+main{
+    margin-top:30vh;
+    background-color: rgb(174, 193, 255);
+    width: 200px;
+    height: 215px;
+    padding-top:10px ;
+    border-width: 2px;
+    border-radius: 5px;
+    
+}
+
+
+#buttons{
+    width: 40px ;
+    height: 40px;
+    margin: 3px 2px;
+    border-width: 1.3px;
+    border-radius: 4px;
+    background-color: rgb(243, 246, 152);
+}
+
+#buttons:hover{
+    cursor: pointer;
+}
+.row1 input{
+    padding-top: 3px;
+    padding-left: 12px;
+    border:1.5px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
